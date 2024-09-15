@@ -1,0 +1,43 @@
+# Site title and description
+title: My GitHub Pages Site
+description: This is a description of my GitHub Pages site.
+
+# Base URL for the site
+baseurl: "" # The subpath of your site, e.g., /blog (leave blank if the site is hosted at the root)
+
+# URL for the site
+url: "https://username.github.io" # Replace with your GitHub Pages URL
+
+# Theme settings
+theme: jekyll-theme-slate # You can choose a different theme if you prefer
+
+# Author information
+author:
+  name: Your Name
+  email: your.email@example.com
+
+# Navigation settings
+nav:
+  - title: Home
+    url: /index
+  - title: About
+    url: /about
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude files and directories from processing
+exclude:
+  - README.md
+  - node_modules
+  - .gitignore
+
+# Collections and directories
+collections:
+  my_collection:
+    output: true
+
+# Permalinks
+permalink: pretty
