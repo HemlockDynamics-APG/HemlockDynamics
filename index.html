@@ -3,37 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Protected Page</title>
+    <title>Login Page</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        .hidden { display: none; }
-        #login-container { margin-bottom: 20px; }
         input[type="password"] { padding: 10px; margin: 10px 0; }
         button { padding: 10px 20px; }
         #error-message { color: red; display: none; }
     </style>
 </head>
 <body>
-    <div id="login-container">
-        <h2>Please Enter Password</h2>
-        <input type="password" id="password-input" placeholder="Enter password">
-        <button onclick="checkPassword()">Submit</button>
-        <p id="error-message">Incorrect password. Please try again.</p>
-    </div>
-    
-    <div id="protected-content" class="hidden">
-        <h1>Protected Content</h1>
-        <p>Welcome to the protected content section. You have successfully entered the correct password!</p>
-    </div>
+    <h2>Please Enter Passcode</h2>
+    <input type="password" id="passcode-input" placeholder="Enter passcode">
+    <button onclick="checkPasscode()">Submit</button>
+    <p id="error-message">Incorrect passcode. Please try again.</p>
 
     <script>
-        const correctPassword = 'yourPassword'; // Replace with your desired password
+        // Define your passcode here
+        const correctPasscode = 'patience'; // Replace with your desired passcode
 
-        function checkPassword() {
-            const passwordInput = document.getElementById('password-input').value;
-            if (passwordInput === correctPassword) {
-                document.getElementById('login-container').style.display = 'none';
-                document.getElementById('protected-content').style.display = 'block';
+        function checkPasscode() {
+            const passcodeInput = document.getElementById('passcode-input').value;
+            if (passcodeInput === correctPasscode) {
+                // Redirect to another page upon successful passcode entry
+                window.location.href = 'protected-page.html'; // Replace with your target page
             } else {
                 document.getElementById('error-message').style.display = 'block';
             }
