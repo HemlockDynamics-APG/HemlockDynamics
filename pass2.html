@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        input[type="password"] { padding: 10px; margin: 10px 0; }
+        button { padding: 10px 20px; }
+        #error-message { color: red; display: none; }
+    </style>
+</head>
+<body>
+    <h2>Please Enter Passcode 2</h2>
+    <input type="password" id="passcode-input" placeholder="Enter passcode">
+    <button onclick="checkPasscode()">Submit</button>
+    <p id="error-message">Incorrect passcode. Please try again.</p>
 
+    <script>
+        // Define your passcode here
+        const correctPasscode = 'raven'; // Replace with your desired passcode
+
+        function checkPasscode() {
+            const passcodeInput = document.getElementById('passcode-input').value;
+            if (passcodeInput === correctPasscode) {
+                // Redirect to another page upon successful passcode entry
+                window.location.href = 'result1.html'; // Replace with your target page
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
