@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const errorMessage = document.getElementById('error-message');
 
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); // Prevent form from submitting normally
 
         const password = document.getElementById('password').value;
 
-        fetch('credentials.json')
+        fetch('data/credentials.json')
             .then(response => response.json())
             .then(credentialsList => {
                 // Find the credential that matches the entered password
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (validCredential) {
                     // Redirect to the page specified in the credentials file
-                    window.location.href = validCredential.redirect;
+                    window.location.href = `pages/${validCredential.redirect}`;
                 } else {
                     errorMessage.style.display = 'block'; // Show error message
                 }
