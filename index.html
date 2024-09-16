@@ -1,37 +1,22 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        input[type="password"] { padding: 10px; margin: 10px 0; }
-        button { padding: 10px 20px; }
-        #error-message { color: red; display: none; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h2>Please Enter Passcode</h2>
-    <input type="password" id="passcode-input" placeholder="Enter passcode">
-    <button onclick="checkPasscode()">Submit</button>
-    <p id="error-message">Incorrect passcode. Please try again.</p>
+    <h2>Login</h2>
+    <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p id="error-message" style="color: red; display: none;">Incorrect username or password</p>
+    </form>
 
-    <script>
-        // Define your passcode here
-        const correctPasscode = 'patience'; // Replace with your desired passcode
-
-        function checkPasscode() {
-            const passcodeInput = document.getElementById('passcode-input').value;
-            if (passcodeInput === correctPasscode) {
-                // Redirect to another page upon successful passcode entry
-                window.location.href = 'result1.html'; // Replace with your target page
-            } else {
-                document.getElementById('error-message').style.display = 'block';
-            }
-        }
-    </script>
-</body>
+    <script src="js/login.js"></script>
 <br>
 You have alot of this<a href="hint.html">...</a>
 
