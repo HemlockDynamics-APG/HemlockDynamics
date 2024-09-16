@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const password = document.getElementById('password').value;
 
-        fetch('root/credentials.json')
+        fetch('credentials.json')
             .then(response => response.json())
             .then(credentialsList => {
                 // Find the credential that matches the entered password
